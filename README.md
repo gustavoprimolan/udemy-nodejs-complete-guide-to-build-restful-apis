@@ -175,11 +175,8 @@ npm list --depth=0
 * With nodemon we do not need to reestart the application (hot deploy)
 
 <h2>Environment Variables</h2>
-```js
 
 const port = process.env.PORT || 3000;
-
-```
 
 <h2>Input Validation</h2>
 * npm i joi
@@ -188,7 +185,7 @@ const port = process.env.PORT || 3000;
 
 
 -------------------------------------------------------------------------------------------
-<h1>Express-Advanced Topics</h1>
+<h1>Seção 05 - Express-Advanced Topics</h1>
 
 <h2>Introducing</h2>
 * In this sections
@@ -234,4 +231,76 @@ or shortcut
 
 <h2>Authentication</h2>
 * Outside of scope of express
+
+---------------------------------------------------------------------------------------------------
+<h1>Seção 06 - Asynchronous JavaScript</h1>
+
+<h2>Patterns for Dealing with Asynchronous Code</h2>
+* There are 3 patterns to lead with asynchronous code
+* Callbacks
+* Promises
+* Async/await
+
+<h2>Callbacks</h2>
+* A callback is a function that we are going to call when the result of an asynchronous operation is ready.
+
+<h2>Callback Hell</h2>
+* When forms a Christmas Tree
+
+<h2>Promises</h2>
+* Holds the eventual result of an asynchronous operation.
+* When an asynchronous operation completes, it can either result in a value or an error.
+
+--------------------------------------------------------------------------------------------------------
+<h1>Seção 07 - CRUD Operations Using MongoDB</h1>
+
+<h2>Introducing MongoDB</h2>
+* A document or NoSQL database.
+
+<h2>Connecting to MongoDB</h2>
+* Mongoose gives us a simple api to work with a MongoDB database.
+* When you want to deploy your application to a production envirnment, you're going to have a different connection string for the production envirnment.
+
+<h2>Schema</h2>
+* We use a schema to define the shape of documents within a collection in MongoDB.
+* Schema Types:
+	* String
+	* Number
+	* Date
+	* Buffer - Which we use for storing binary data
+	* Boolean
+	* ObjectID which is used for assigning unit identifiers
+	* Array
+
+--------------------------------------------------------------------------------------------
+<h1>Seção 08 - Mongoose - Data Validation</h1>
+
+<h2>Validation</h2>
+* Mongoose who does the validations.
+* MongoDB doens't care about validations.
+* We will use joy for validation. Use Joy and Mongoose Validation.
+
+---------------------------------------------------------------------------------------
+<h1>Seção 09 - Mongoose - Modeling Relationships Between Connected Data</h1>
+
+<h2>Transaction</h2>
+* In SQL Databases we have the concept of transaction, which basically means a group of operations that should be performed as a unit. So either all these operations will complete and change the state of the database, or if something fails in the middle, all these operations that have been applied will be rolled back and our database will go back int he initate state. 
+
+* Now, in MongoDB we don't have transactions as we have in these relational databases, we have a technique called two phase commit.
+
+* npm i fawn
+
+<h2>Validating Object ID's</h2>
+
+* npm i joi-objectid
+
+<h1>Seção 10 - Authentication and Authorization</h1>
+
+<h2>Using Lodash</h2>
+* npm i lodash
+
+* For complexity passwords use:
+* joi-password-complexity
+* npm i joi-password-complexity
+
 
