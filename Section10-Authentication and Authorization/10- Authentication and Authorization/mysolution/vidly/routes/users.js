@@ -2,6 +2,7 @@ const _ = require('lodash');
 const {User, validateUser} = require('../models/user');
 const mongoose = require('mongoose');
 const express = require('express');
+const bcryptjs = require('bcryptjs');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
@@ -20,7 +21,12 @@ router.post('/', async (req, res) => {
     });
     */
     user = new User(_.pick(req.body, ['name', 'email', 'password']));
-
+    //GERA O SALT (DEIXA SALGADO ATÉ UM CERTO NÍVEL) - DEIXA ATÉ UM CERTO NÍVEL
+    const salt = await bcryptjs.genSalt(10);
+    //GERA O HASH
+    const hashed = await bcryptjs.hash(user.password, salt);
+    user.password = hashed;
+    
     await user.save();
 
     //PEGA APENAS AS PROPRIEDADES name e email DO OBJETO

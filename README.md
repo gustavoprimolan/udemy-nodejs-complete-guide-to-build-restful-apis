@@ -304,3 +304,17 @@ or shortcut
 * npm i joi-password-complexity
 
 
+<h2>Hashing Passwords</h2>
+
+* npm i bcryptjs
+
+<h2>JSON WEB Tokens</h2>
+
+*JWT
+* When the users logins in the server, we generate this JSON Web Token, which is basically like a license or password. We give it to the client, and then tell them: "next time you want to come back here and call one of our PAI endpoints, we need to show your password, we need to show your drivers license."
+
+<img src="imgs/05.PNG" />
+
+<h2>Generating Authentication Tokens</h2>
+* npm i jsonwebtoken
+
